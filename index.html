@@ -114,6 +114,7 @@ function addLayer(layer, name, zIndex,iset) {
         map.removeLayer(layer);
         this.className = '';
     }else{
+        map.addLayer(layer);
         this.className = 'active';
     }
 
