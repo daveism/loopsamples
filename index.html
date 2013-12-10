@@ -113,7 +113,10 @@ function addLayer(layer, name, zIndex,iset) {
     if (!iset){
         map.removeLayer(layer);
         this.className = '';
+    }else{
+        this.className = 'active';
     }
+
 
     item.appendChild(link);
     ui.appendChild(item);
