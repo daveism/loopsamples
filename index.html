@@ -93,6 +93,14 @@ function addLayer(layer, name, zIndex,iset) {
         e.preventDefault();
         e.stopPropagation();
 
+            map.removeLayer('Option 1');
+            this.className = '';
+            map.removeLayer('Option 2');
+            this.className = '';
+            map.removeLayer('Option 3');
+            this.className = '';
+
+
         if (map.hasLayer(layer)) {
             map.removeLayer(layer);
             this.className = '';
