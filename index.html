@@ -68,10 +68,10 @@
 var map = L.map('map').setView([35.4900, -82.6300], 14);
 var ui = document.getElementById('map-ui');
 
-addLayer(L.mapbox.tileLayer('examples.map-zgrqqx0w'), 'Base Map', 1,true);
-addLayer(L.mapbox.markerLayer('data/testoption1.geojson'),'Option 1',4,true);
-addLayer(L.mapbox.markerLayer('data/testoption2.geojson'),'Option 2',5,false);;
-addLayer(L.mapbox.markerLayer('data/testoption3.geojson'),'Option 3',6,false);
+addLayer(L.mapbox.tileLayer('examples.map-zgrqqx0w'), 'Base Map', 1);
+addLayer(L.mapbox.markerLayer('data/testoption1.geojson'),'Option 1',2);
+addLayer(L.mapbox.markerLayer('data/testoption2.geojson'),'Option 2',3);;
+addLayer(L.mapbox.markerLayer('data/testoption3.geojson'),'Option 3',4);
 
 
 function addLayer(layer, name, zIndex,iset) {
@@ -100,18 +100,7 @@ function addLayer(layer, name, zIndex,iset) {
             map.addLayer(layer);
             this.className = 'active';
         }
-
-
-
     };
-
-    if (!iset){
-        map.removeLayer(layer);
-        this.className = '';
-    }else{
-        map.addLayer(layer);
-        this.className = 'active';
-    }
 
 
     item.appendChild(link);
