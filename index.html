@@ -87,9 +87,7 @@ function addLayer(layer, name, zIndex,iset) {
     link.href = '#';
     link.className = 'active';
     link.innerHTML = name;
-    if (iset){
-        map.removeLayer(layer);
-    }
+
 
     link.onclick = function(e) {
         e.preventDefault();
@@ -103,6 +101,11 @@ function addLayer(layer, name, zIndex,iset) {
             this.className = 'active';
         }
     };
+
+    if (!iset){
+        map.removeLayer(layer);
+        this.className = '';
+    }
 
     item.appendChild(link);
     ui.appendChild(item);
